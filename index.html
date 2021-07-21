@@ -10,15 +10,22 @@
 <body>
     <main>
         <h1>Trivia Game</h1>
-        <div>
-            <label id = "question">Question</label>
+        <div id = "start_page">
+            <h1>Click start to begin</h1>
+            <input type="button" id="start" value="Start">
+        </div>
+
+        <div id = "question_page">
+            <label id = "question_text">Question</label>
             <input type="radio" name="button" id = "A1" value = "answer1">Answer 1
             <input type="radio" name="button" id = "A2" value = "answer2">Answer 2
             <input type="radio" name="button" id = "A3" value = "answer3">Answer 3
             <input type="radio" name="button" id = "A4" value = "answer4">Answer 4
-        </div>
-        <div>
             <input type="button" id="submit" value="Submit">
+        </div>
+
+        <div id = "score_page">
+            <input type="button" id="restart" value="Restart">
         </div>
     </main>
     <script src="trivia.js"></script>
