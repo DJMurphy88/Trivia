@@ -9,6 +9,7 @@ $("#question_page").style.display = "none"
 $("#score_page").style.display = "none"
 
 const start_game = () => {
+    set_question()
     $("#start_page").style.display = "none"
     $("#question_page").style.display = "block"
 }
@@ -19,21 +20,33 @@ const restart = () => {
 }
 const show_score = () => {  
     $("#question_page").style.display = "none"
-    $("#score_page").style.display = "block"
-
-    
+    $("#score_page").style.display = "block"   
 }
 
+const set_question = () => {
+
+    let question_array = [
+        {question: "question",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"}]
+
+    $("#question").value = question_array[0].right_answer
+    $("#question").innerHTML = question_array[0].question    
+ 
+    $("#A1").nextElementSibling.innerHTML = question_array[0].answers.a
+    $("#A2").nextElementSibling.innerHTML = question_array[0].answers.b
+    $("#A3").nextElementSibling.innerHTML = question_array[0].answers.c
+    $("#A4").nextElementSibling.innerHTML = question_array[0].answers.d
+}
 
 const submit_answer = () => {
     let player_answer = ""
     let radios = document.getElementsByName("button")
-    let right_answer = "answer1"
+
+    let right_answer = document.getElementById("question").value
 
     if (question_number <= 9) {
         for (let i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
-                console.log(radios[i].value)
                 player_answer = radios[i].value
                 break
             }
@@ -47,10 +60,10 @@ const submit_answer = () => {
         show_score()
     }
 
-    console.log(question_number)
-    console.log(player_answer)
-    console.log(right_answer)
-    console.log(correct_answers)
+    console.log("Question number: " +question_number)
+    console.log("Player answer: " +player_answer)
+    console.log("Right answer: " +right_answer)
+    console.log("Correct answer: " +correct_answers)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
