@@ -8,7 +8,7 @@ $("#start_page").style.display = "block"
 $("#question_page").style.display = "none"
 $("#score_page").style.display = "none"
 
-const start_game = () => {
+const play_game = () => {
     set_question()
     $("#start_page").style.display = "none"
     $("#question_page").style.display = "block"
@@ -24,18 +24,41 @@ const show_score = () => {
 }
 
 const set_question = () => {
+    let i = Math.floor(Math.random() * 10);
 
-    let question_array = [
-        {question: "question",
-         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"}]
+   let questions = [
+        {question: "question1",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
+        {question: "question2",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"},
+        {question: "question3",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "c"},
+        {question: "question4",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "d"},
+        {question: "question5",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
+        {question: "question6",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"},
+        {question: "question7",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "c"},
+        {question: "question8",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "d"},
+        {question: "question9",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
+        {question: "question10",
+         answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"}
+        ]
 
-    $("#question").value = question_array[0].right_answer
-    $("#question").innerHTML = question_array[0].question    
+       let random_question = questions[i]
+       console.log(random_question)
+
+    $("#question").value = random_question.right_answer
+    $("#question").innerHTML = random_question.question    
  
-    $("#A1").nextElementSibling.innerHTML = question_array[0].answers.a
-    $("#A2").nextElementSibling.innerHTML = question_array[0].answers.b
-    $("#A3").nextElementSibling.innerHTML = question_array[0].answers.c
-    $("#A4").nextElementSibling.innerHTML = question_array[0].answers.d
+    $("#A1").nextElementSibling.innerHTML = random_question.answers.a
+    $("#A2").nextElementSibling.innerHTML = random_question.answers.b
+    $("#A3").nextElementSibling.innerHTML = random_question.answers.c
+    $("#A4").nextElementSibling.innerHTML = random_question.answers.d
 }
 
 const submit_answer = () => {
@@ -55,6 +78,7 @@ const submit_answer = () => {
             correct_answers += 1
         }
         question_number++
+        play_game()
     }
     else {
         show_score()
@@ -68,6 +92,6 @@ const submit_answer = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     $("#submit").addEventListener("click", submit_answer)
-    $("#start").addEventListener("click", start_game)
+    $("#start").addEventListener("click", play_game)
     $("#restart").addEventListener("click", restart)
 });
