@@ -9,28 +9,37 @@
 
 <body>
     <main>
-        <h1>Trivia Game</h1>
-        <div id = "start_page">
-            <h1>Click start to begin</h1>
-            <input type="button" id="start" value="Start">
-        </div>
+        <div class = "grid-container">
+            <div class = "item1"><h1>Trivia Game</h1></div>
+            <div class = "item2" id = "start_page">
+                <h1>Click start to begin</h1>
+                <input type="button" id="start" value="Start">
+            </div>
 
-        <div id = "question_page">
-            <label id = "question"></label>
-            <p>
-            <input type="radio" name="button" id = "A1" value = "a"><span></span>
-            <input type="radio" name="button" id = "A2" value = "b"><span></span>
-            <input type="radio" name="button" id = "A3" value = "c"><span></span>
-            <input type="radio" name="button" id = "A4" value = "d"><span></span>
-            </p>
-            <input type="button" id="submit" value="Submit">
-            
-            
-           
-        </div>
+            <div class = "item2" id = "question_page">
+                <label id = "question"></label>
+                <p>
+                <input type="radio" name="button" id = "A1" value = "a"><span></span>
+                <input type="radio" name="button" id = "A2" value = "b"><span></span>
+                <input type="radio" name="button" id = "A3" value = "c"><span></span>
+                <input type="radio" name="button" id = "A4" value = "d"><span></span>
+                </p>
+                <input type="button" id="submit" value="Submit"> 
+            </div>
 
-        <div id = "score_page">
-            <input type="button" id="restart" value="Restart">
+            <div class = "item2" id = "score_page">
+                <p>
+                <span id = "score_span"></span>
+                </p>
+                <input type="button" id="restart" value="Restart">
+            </div>
+
+            <div class = "item3">
+                <span  id = "info_panel"></span>
+            </div>
+            <div class = "item4">
+
+            </div>
         </div>
     </main>
     <script src="trivia.js"></script>
