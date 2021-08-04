@@ -5,26 +5,26 @@ let correct_answers = 0
 let question_number = 0
 
 let questions = [
-    {question: "question1",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
-    {question: "question2",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"},
-    {question: "question3",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "c"},
-    {question: "question4",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "d"},
-    {question: "question5",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
-    {question: "question6",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"},
-    {question: "question7",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "c"},
-    {question: "question8",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "d"},
-    {question: "question9",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "a"},
-    {question: "question10",
-     answers: {a: "a", b: "b", c: "c", d: "d"}, right_answer: "b"}
+    {question: "What is the longest river in the world?",
+     answers: {a: "Nile", b: "Amazon", c: "Yangtze", d: "Mississippi"}, right_answer: "a"},
+    {question: "What is the tallest mountain in North America?",
+     answers: {a: "King Peak", b: "Pico de Orizaba", c: "Mount Logan", d: "Denali"}, right_answer: "d"},
+    {question: "What is the largest lake in the world?",
+     answers: {a: "Victoria", b: "Superior", c: "Huron", d: "Michigan"}, right_answer: "b"},
+    {question: "What is the largest country in South America?",
+     answers: {a: "Argentina", b: "Bolivia", c: "Peru", d: "Brazil"}, right_answer: "d"},
+    {question: "Which nation is the largest by land area?",
+     answers: {a: "Russia", b: "China:", c: "Canada", d: "USA"}, right_answer: "a"},
+    {question: "What is the capital of Spain?",
+     answers: {a: "Madrid", b: "Barcelona", c: "Sevilla", d: "Zaragoza"}, right_answer: "b"},
+    {question: "What is the driest desert in the world?",
+     answers: {a: "Mojave", b: "Sahara", c: "Atacama", d: "Arabian"}, right_answer: "c"},
+    {question: "How many countries does the Equator pass through?",
+     answers: {a: "10", b: "13", c: "9", d: "15"}, right_answer: "b"},
+    {question: "Which city has the highest population?",
+     answers: {a: "Tokyo", b: "New York", c: "Beijing", d: "Delhi"}, right_answer: "a"},
+    {question: "What is the largest island in the world?",
+     answers: {a: "Baffin", b: "Borneo", c: "Greenland", d: "Madagascar"}, right_answer: "c"}
     ]
 
 $("#start_page").style.display = "block"

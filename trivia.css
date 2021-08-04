@@ -1,11 +1,16 @@
 h1 {
-	color: blue;
+	color:sienna;
 	margin-top: 0;
     text-align: center;
 }
 main {
     padding: 1em 2em;
 }
+
+body {
+    background-image: url("Earth-map.jpg");
+}
+
 label {
     width: 16em;
 }
@@ -25,11 +30,11 @@ input {
     'main main main right'
     'footer footer footer footer';
     grid-gap: 1px;
-    background-color: deepskyblue;
+    background-color:black;
     padding: 10px;
 }
 .grid-container > div {
-    background-color: white;
+    background-color: khaki;
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
