@@ -8,7 +8,7 @@ main {
 }
 
 body {
-    background-image: url("Earth-map.jpg");
+    background-image: url("/Earth-map.jpg");
 }
 
 label {
